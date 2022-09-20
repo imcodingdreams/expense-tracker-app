@@ -22,7 +22,7 @@ newExpAmount.innerText = expenseAmount.value;
 
 // EVENT LISTENERS
 document.getElementById('addExpenseBtn').addEventListener('click', displayNewExpense);
-displayNewExpense();
+
 
 //FUNCTIONS
 
@@ -34,6 +34,7 @@ function displayNewExpense() {
   tblBody.appendChild(newExpenseRow);
 }
 
+displayNewExpense();
 
 
 // PSEUDOCODE
