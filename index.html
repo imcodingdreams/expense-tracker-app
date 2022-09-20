@@ -11,39 +11,39 @@
   <header>
     <h1>My Expense Tracker</h1>
   </header>
-  <div class="add-expense-container"></div>
+  <div class="add-expense-container">
     <h3>Add new expense:</h3>
-    <div class="add-expense-input-container">
+    <form class="add-expense-input-container" id="expensesForm">
       <div class="input-container-1">
         <div class="label-input-type">
           <label for="type">Type:</label>
-              <select name="type" id="paymentMethod" required>
-                <option value="💳">Card</option>
-                <option value="💵">Cash</option>
-                <option value="">Cryptocoin</option>
-                <option value="">Other</option>
+              <select name="type" id="paymentType" required>
+                <option>Card</option>
+                <option>Cash</option>
+                <option>Cryptocoin</option>
+                <option>Other</option>
               </select>
         </div>
         <div class="label-input-date">      
           <label for="date">Date:</label>
-              <input type="date" name="date" id="">  
+              <input type="date" name="date" id="date" required>  
         </div> 
       </div>
       <div class="input-container-2">
         <div class="label-input-name">
           <label for="name">Name:</label>
-              <input type="text" name="name" placeholder="What did you spend on?" id="">
+              <input type="text" name="name" placeholder="What did you spend on?" id="name" required>
         </div>
         <div class="label-input-amount">
           <label for="amount">Amount:</label>
-              <input type="number" name="number" min="1" id="">
+              <input type="number" name="number" min="1" placeholder="How much?" id="amount" required>
         </div>
       </div>
-    </div>
+    </form>
       <div class="add-expense-btn">
-        <button>Add a new expense</button>
+        <button type="submit" id="addExpenseBtn" >Add a new expense</button>
       </div>
-      <table>
+      <table id="expensesTbl">
         <thead>
           <tr>
             <th>Type</th>
@@ -52,13 +52,22 @@
             <th>Amount</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <!-- <td></td> -->
-          </tr>
+        <tbody id="tblBody">
+          <!-- <tr>
+            <td></td> -->
+            <!-- <button>X</button>
+          </tr -->
         </tbody>
       </table>
-  </div>
+  </div>  
   <script src="script.js"></script>
 </body>
 </html>
+
+
+
+<!-- PSEUDOCODE -->
+<!-- Once the user click the add an espense button, add the information to the table. -->
+<!-- Create a Table row with Type/Name/Date/Amount. -->
+
+<!-- LOGIC -->
