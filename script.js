@@ -1,40 +1,51 @@
-// VARIABLES
-const paymentType = document.getElementById('paymentType');
-const expenseName = document.getElementById('name');
-const expenseDate = document.getElementById('date');
-const expenseAmount = document.getElementById('amount');
-
-const newPaymentType = document.createElement('select');
-newPaymentType.setAttribute('class', 'new-payment-type');
-newPaymentType.innerText = paymentType.value;
-
-const newExpName = document.createElement('input');
-newExpName.setAttribute('class', 'new-name');
-newExpName.innerText = expenseName.value;
-
-const newExpDate = document.createElement('input');
-newExpDate.setAttribute('class', 'new-date');
-newExpDate.innerText = expenseDate.value;
-
-const newExpAmount = document.createElement('input');
-newExpAmount.setAttribute('class', 'new-amount');
-newExpAmount.innerText = expenseAmount.value;
+//VARIABLES
 
 // EVENT LISTENERS
 document.getElementById('addExpenseBtn').addEventListener('click', displayNewExpense);
 
-
 //FUNCTIONS
 
 function displayNewExpense() {
-  const newExpenseRow = document.createElement('tr');
-  newExpenseRow.setAttribute('class', 'new-row');
-  const newExpenseHtml = '<td>' + newPaymentType + '</td><td>' + newExpName + '</td><td>' + newExpDate + '</td><td>' + newExpAmount + '</td>';
-  newExpenseRow.innerHTML = newExpenseHtml;
-  tblBody.appendChild(newExpenseRow);
+  
+  // const newExpenseRow = document.createElement('tr');
+  // newExpenseRow.setAttribute('class', 'new-row');
+
+  const paymentType = document.getElementById('paymentType').value;
+  const newPaymentType = document.createElement('td');
+  newPaymentType.setAttribute('class', 'new-payment-type');
+  newPaymentType.innerHTML = paymentType;
+
+  const expenseName = document.getElementById('name').value;
+  const newExpName = document.createElement('td');
+  newExpName.setAttribute('class', 'new-name');
+  newExpName.innerHTML = expenseName;
+
+  const expenseDate = document.getElementById('date').value;
+  const newExpDate = document.createElement('td');
+  newExpDate.setAttribute('class', 'new-date');
+  newExpDate.innerHTML = expenseDate;
+
+  const expenseAmount = document.getElementById('amount').value;
+  const newExpAmount = document.createElement('td');
+  newExpAmount.setAttribute('class', 'new-amount');
+  newExpAmount.innerHTML = expenseAmount;
+
+  const deleteBtn = document.createElement('td');
+  deleteBtn.innerHTML = '<button> <i class="fa-regular fa-trash-can"></i> </button>';
+  deleteBtn.addEventListener('click', deleteExpense);
+
+  tblBody.appendChild(newPaymentType);
+  tblBody.appendChild(newExpName);
+  tblBody.appendChild(newExpDate);
+  tblBody.appendChild(newExpAmount);
+  tblBody.appendChild(deleteBtn);
 }
 
-displayNewExpense();
+function deleteExpense(e) {
+  const deleteBtn = e.target;
+  const newExpenseRow = deleteBtn.parentElement;
+  tblBody.removeChild(newExpenseRow);
+  }
 
 
 // PSEUDOCODE
@@ -71,6 +82,13 @@ displayNewExpense();
 
 
 //FUNCTIONS
+
+// When I click the button
+// appendChild newPaymentType
+// appendChild newExpName
+// appendChild newExpDate
+// appendChild newExpAmount
+
 
 // Create a variable to hold the new expense row
 // Append new row to body table

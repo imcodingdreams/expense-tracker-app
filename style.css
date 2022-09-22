@@ -68,13 +68,28 @@ label {
   margin-right: 5px;
 }
 
-button {
+i {
+  pointer-events: none;
+}
+
+.add-expense-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 70px;
   height: 40px;
   width: 180px;
+  font-size: 16px;
+  padding:
+}
+
+.deleteBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  height: 40px;
+  width: 40px;
   font-size: 16px;
 }
 
@@ -92,4 +107,5 @@ td, th {
   border-radius: 3px;
   background: #eee;
   padding: 0.5rem;
+  text-align: center;
 }

@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expense tracker</title>
+  <script src="https://kit.fontawesome.com/affad7460b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +17,7 @@
     <form class="add-expense-input-container" id="expensesForm">
       <div class="input-container-1">
         <div class="label-input-type">
-          <label for="type">Type:</label>
+          <label for="paymentType">Type:</label>
               <select name="type" id="paymentType" required>
                 <option>Card</option>
                 <option>Cash</option>
@@ -40,8 +41,8 @@
         </div>
       </div>
     </form>
-      <div class="add-expense-btn">
-        <button type="submit" id="addExpenseBtn" >Add a new expense</button>
+      <div>
+        <button class="add-expense-btn" type="submit" id="addExpenseBtn">Add a new expense</button>
       </div>
       <table id="expensesTbl">
         <thead>
@@ -50,6 +51,7 @@
             <th>Name</th>
             <th>Date</th>
             <th>Amount</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody id="tblBody">
