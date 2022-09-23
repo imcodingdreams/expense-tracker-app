@@ -1,21 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin-top: 50px;
   padding: 0%;
   font-size: 16px;
   font-family: sans-serif;
-  height: 100%;
-  width: 100%;
+  min-height: 100vh;
   background: linear-gradient(45deg, rgb(29, 101, 234), rgb(239, 233, 64));
 }
 
 header {
-  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .add-expense-container {
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,15 +44,11 @@ input, select {
   outline: none;
 }
 
-/* input:focus::placeholder {
-  color: transparent;
-} */
-
 .add-expense-input-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 25px
+  margin-top: 35px
 }
 
 .input-container-1 {
@@ -80,7 +81,6 @@ i {
   height: 40px;
   width: 180px;
   font-size: 16px;
-  padding:
 }
 
 .deleteBtn {
