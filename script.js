@@ -48,7 +48,7 @@ function deleteExpense(e) {
   const deleteBtn = e.target;
   const newExpenseRow = deleteBtn.parentElement;
   deleteBtn.parentElement.remove(newExpenseRow);
-  }
+};
 
 
 // Nodes
