@@ -14,36 +14,39 @@
   </header>
   <div class="add-expense-container">
     <h3>Add new expense:</h3>
-    <form class="add-expense-input-container" id="expensesForm">
-      <div class="input-container-1">
-        <div class="label-input-type">
-          <label for="paymentType">Type:</label>
-              <select name="type" id="paymentType" required>
-                <option>Card</option>
-                <option>Cash</option>
-                <option>Cryptocoin</option>
-                <option>Other</option>
-              </select>
+    <form class="add-expense-input-container" id="expensesForm" onsubmit = "event.preventDefault()">
+      <div class="input-containers">
+        <div class="input-container-1">
+          <div class="label-input-type">
+            <label for="paymentType">Type:</label>
+                <select name="type" id="paymentType" required/>
+                  <option value="" disabled selected hidden>Choose payment type</option>
+                  <option>Card</option>
+                  <option>Cash</option>
+                  <option>Cryptocoin</option>
+                  <option>Other</option>
+                </select>
+          </div>
+          <div class="label-input-date">      
+            <label for="date">Date:</label>
+                <input type="date" name="date" id="expenseDate" required/>  
+          </div> 
         </div>
-        <div class="label-input-date">      
-          <label for="date">Date:</label>
-              <input type="date" name="date" id="expenseDate" required>  
-        </div> 
+        <div class="input-container-2">
+          <div class="label-input-name">
+            <label for="name">Name:</label>
+                <input type="text" name="name" placeholder="What did you spend on?" id="expenseName" required/>
+          </div>
+          <div class="label-input-amount">
+            <label for="amount">Amount:</label>
+                <input type="number" name="number" min="1" placeholder="How much?" id="expenseAmount" required/>
+          </div>
+        </div>
       </div>
-      <div class="input-container-2">
-        <div class="label-input-name">
-          <label for="name">Name:</label>
-              <input type="text" name="name" placeholder="What did you spend on?" id="expenseName" required>
-        </div>
-        <div class="label-input-amount">
-          <label for="amount">Amount:</label>
-              <input type="number" name="number" min="1" placeholder="How much?" id="expenseAmount" required>
-        </div>
+      <div class="expense-btn-container">
+        <button class="add-expense-btn" id="addExpenseBtn" type="submit">Add a new expense</button>
       </div>
     </form>
-      <div>
-        <button class="add-expense-btn" type="submit" id="addExpenseBtn">Add a new expense</button>
-      </div>
       <table id="expensesTbl">
         <thead>
           <tr>
@@ -54,12 +57,7 @@
             <th>Delete</th>
           </tr>
         </thead>
-        <tbody id="tblBody">
-          <tr id="newExpenseRow" class="new-row">
-            <!--<td></td> -->
-            <!-- <button>X</button>-->
-          </tr>
-        </tbody>
+        <tbody id="tblBody"></tbody>
       </table>
   </div>  
   <script src="script.js"></script>
