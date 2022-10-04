@@ -23,7 +23,7 @@ function createNewRow() {
     paymentType.innerHTML = document.getElementById('paymentType').value;
     expenseName.innerHTML = document.getElementById('expenseName').value;
     expenseDate.innerHTML = document.getElementById('expenseDate').value;
-    expenseAmount.innerHTML = document.getElementById('expenseAmount').value;
+    expenseAmount.innerHTML = '$'+ document.getElementById('expenseAmount').value;
     deleteExpBtn.innerHTML = '<button class="delete-btn" onclick="deleteRow(this)"> <i class="fa-regular fa-trash-can"></i>';
 };
 
