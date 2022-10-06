@@ -55,13 +55,7 @@ input, select {
   display: flex;
 }
 
-.input-container-1 {
-  margin-right: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.input-container-2 {
+.input-container-1, .input-container-2 {
   margin-right: 20px;
   display: flex;
   flex-direction: column;
@@ -73,6 +67,9 @@ input, select {
 
 .label-input-name label {
   margin-right: 18px;
+}
+.expense-amount {
+  margin-bottom: 0px;
 }
 
 label {
@@ -104,7 +101,7 @@ i {
 }
 
 tbody tr:nth-child(odd) {
-  background: #eee;
+  background: #ccc;
 }
 
 table {
