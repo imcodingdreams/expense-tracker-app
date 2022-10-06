@@ -56,7 +56,7 @@ function createNewRow() {
   let day = [(mydate.getDate() + 1)];
     const nth = function(day) {
       if (day > 20 || day < 10) {
-      switch (day % 10) { //Returns 1, 2 or 3
+      switch (day % 10) {
         case 1:
           return "st";
         case 2:
@@ -67,15 +67,15 @@ function createNewRow() {
     }
     return "th";
   };
-  var str = month + " " + day + nth() + ", " + mydate.getFullYear();
-  expenseDateCell.innerHTML = str;
+  const formattedDate = month + " " + day + nth() + ", " + mydate.getFullYear();
+  expenseDateCell.innerHTML = formattedDate;
 
   expenseAmountCell.innerHTML = '$'+ expenseAmount.value;
   deleteExpBtnCell.innerHTML = '<button class="delete-btn" onclick="deleteRow(this)"> <i class="fa-regular fa-trash-can"></i>';
 };
 
 function deleteRow(e) {
-  var i = e.parentNode.parentNode.rowIndex;
+  const i = e.parentNode.parentNode.rowIndex;
   document.getElementById('expensesTbl').deleteRow(i);
 };
 
