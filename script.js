@@ -29,12 +29,12 @@ function createNewRow() {
     paymentTypeCell.innerHTML = '<i class="fa-regular fa-credit-card"></i>';
   } else if  
     (paymentType.value === "Cash") {
-      paymentTypeCell.innerHTML = '<i class="fa-regular fa-money-bill-1"></i>';
-    } else if 
-      (paymentType.value === "Cryptocoin") {
-        paymentTypeCell.innerHTML = '<i class="fa-sharp fa-solid fa-bitcoin-sign"></i>';
-      } else {
-        paymentTypeCell.innerHTML = '<i class="fa-regular fa-question"></i>';
+    paymentTypeCell.innerHTML = '<i class="fa-regular fa-money-bill-1"></i>';
+  } else if 
+    (paymentType.value === "Cryptocoin") {
+    paymentTypeCell.innerHTML = '<i class="fa-sharp fa-solid fa-bitcoin-sign"></i>';
+  } else {
+    paymentTypeCell.innerHTML = '<i class="fa-regular fa-question"></i>';
   };
 
   expenseNameCell.innerHTML = expenseName.value;
